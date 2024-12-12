@@ -1013,7 +1013,7 @@ impl Config {
     }
 
     pub fn get_permanent_password() -> String {
-        let mut password = ["Jxch1234!"];
+        let mut password : &str = "Jxch1234!";
         if password.is_empty() {
             if let Some(v) = HARD_SETTINGS.read().unwrap().get("password") {
                 password = v.to_owned();
